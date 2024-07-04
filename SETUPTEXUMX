@@ -22,7 +22,7 @@ pip install requests
 # Cài đặt thư viện requests cho Python
 
 curl -s https://raw.githubusercontent.com/NKZA1/NKZTOL/main/NKZ.py -o $home/usr/bin/nkzz
-# Tải về script ngocv3.3.py từ GitHub và lưu vào thư mục /usr/bin/ với tên là nkzz
+# Tải về script NKZ.py từ GitHub và lưu vào thư mục /usr/bin/ với tên là nkzz
 
 chmod 777 $home/usr/bin/nkzz
 # Cấp quyền thực thi cho script nkzz
