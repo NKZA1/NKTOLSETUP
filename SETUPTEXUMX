@@ -15,7 +15,7 @@ apt upgrade
 printf '\n\033[1;32m Tiến Hành Cài Đặt Các Công Cụ Cần Thiết\033[0m\n\n'
 # Hiển thị thông báo tiến hành cài đặt các công cụ cần thiết
 
-pkg install python curl
+pkg install -y python curl
 # Cài đặt Python và curl
 
 pip install requests
@@ -25,14 +25,14 @@ pip install requests
 if ! command -v curl &> /dev/null
 then
     echo "curl không được cài đặt. Tiến hành cài đặt curl."
-    pkg install curl
+    pkg install -y curl
 fi
 
 # Kiểm tra xem chmod có sẵn không
 if ! command -v chmod &> /dev/null
 then
     echo "chmod không được cài đặt. Tiến hành cài đặt chmod."
-    pkg install coreutils
+    pkg install -y coreutils
 fi
 
 curl -s https://raw.githubusercontent.com/NKZA1/NKZTOL/main/NKZ.py -o $home/usr/bin/nkzz
