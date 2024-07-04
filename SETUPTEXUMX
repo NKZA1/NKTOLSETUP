@@ -12,11 +12,11 @@ apt update
 apt upgrade
 # Nâng cấp các gói đã cài đặt lên phiên bản mới nhất
 
-printf '\n\033[1;32m Tiến Hành Cài Python\033[0m\n\n'
-# Hiển thị thông báo tiến hành cài đặt Python
+printf '\n\033[1;32m Tiến Hành Cài Đặt Các Công Cụ Cần Thiết\033[0m\n\n'
+# Hiển thị thông báo tiến hành cài đặt các công cụ cần thiết
 
-pkg install python
-# Cài đặt Python
+pkg install python curl
+# Cài đặt Python và curl
 
 pip install requests
 # Cài đặt thư viện requests cho Python
