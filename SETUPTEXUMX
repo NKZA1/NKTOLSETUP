@@ -28,15 +28,15 @@ then
     pkg install -y curl
 fi
 
-# Kiểm tra xem chmod có sẵn không
-if ! command -v chmod &> /dev/null
-then
-    echo "chmod không được cài đặt. Tiến hành cài đặt chmod."
-    pkg install -y coreutils
-fi
-
-curl -s https://raw.githubusercontent.com/NKZA1/NKZTOL/main/NKZ.py -o $home/usr/bin/nkzz
 # Tải về script NKZ.py từ GitHub và lưu vào thư mục /usr/bin/ với tên là nkzz
+curl -s https://raw.githubusercontent.com/NKZA1/NKZTOL/main/NKZ.py -o $home/usr/bin/nkzz
+
+# Kiểm tra xem tệp NKZ.py đã được tải xuống thành công chưa
+if [ -f $home/usr/bin/nkzz ]; then
+    echo "Tải xuống và cài đặt thành công tệp NKZ.py."
+else
+    echo "Lỗi khi tải xuống tệp NKZ.py."
+fi
 
 chmod 777 $home/usr/bin/nkzz
 # Cấp quyền thực thi cho script nkzz
